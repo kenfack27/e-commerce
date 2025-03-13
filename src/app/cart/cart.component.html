@@ -1,0 +1,15 @@
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold text-center mb-6">Votre Panier</h2>
+  
+    <div *ngFor="let item of cartItems" class="flex justify-between items-center p-4 bg-white shadow-md rounded-lg mb-4">
+      <span class="font-semibold">{{ item.name }}</span>
+      <span class="text-gray-600">{{ item.price }} €</span>
+    </div>
+  
+    <p class="text-xl font-bold text-center my-4">Total: {{ total }} €</p>
+  
+    <button class="block w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-700 transition" (click)="checkout()">
+      Valider la commande
+    </button>
+  </div>
+  

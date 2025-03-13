@@ -1,0 +1,79 @@
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold text-center mb-6">Dashboard Admin</h2>
+  
+    <!-- Formulaire d'ajout de produit -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-4">Ajouter un produit</h3>
+  
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Nom du produit</label>
+        <input type="text" [(ngModel)]="newProduct.name"
+          class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-500" />
+      </div>
+  
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Prix</label>
+        <input type="number" [(ngModel)]="newProduct.price"
+          class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-500" />
+      </div>
+  
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">URL de l'image</label>
+        <input type="text" [(ngModel)]="newProduct.image"
+          class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-500" />
+      </div>
+  
+      <button (click)="addProduct()"
+        class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-700 transition">
+        Ajouter le produit
+      </button>
+    </div>
+  
+    <!-- Liste des produits -->
+    <table class="w-full bg-white shadow-md rounded-lg overflow-hidden mt-6">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="py-2 px-4">Nom</th>
+          <th class="py-2 px-4">Prix</th>
+          <th class="py-2 px-4">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td class="py-2 px-4">{{ product.name }}</td>
+          <td class="py-2 px-4">{{ product.price }} €</td>
+          <td class="py-2 px-4">
+            <button (click)="deleteProduct(product.id)"
+              class="bg-red-500 text-white px-2 py-1 rounded">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3 class="text-xl font-semibold mt-8">Commandes en attente</h3>
+
+<table class="w-full bg-white shadow-md rounded-lg overflow-hidden mt-4">
+  <thead>
+    <tr class="bg-gray-200">
+      <th class="py-2 px-4">Commande ID</th>
+      <th class="py-2 px-4">Produits</th>
+      <th class="py-2 px-4">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td class="py-2 px-4">{{ order.id }}</td>
+      <td class="py-2 px-4">
+        <ul>
+          <li *ngFor="let item of order.items">{{ item.name }} ({{ item.price }}€)</li>
+        </ul>
+      </td>
+      <td class="py-2 px-4">
+        <button class="bg-blue-500 text-white px-2 py-1 rounded">Valider</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+  

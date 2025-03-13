@@ -1,0 +1,34 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+      <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Inscription</h2>
+  
+      <!-- Message d'erreur -->
+      <p *ngIf="errorMessage" class="text-red-500 text-sm text-center mb-4">{{ errorMessage }}</p>
+  
+      <!-- Champ Email -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" [(ngModel)]="user.email"
+          class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-500" />
+      </div>
+  
+      <!-- Champ Mot de passe -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Mot de passe</label>
+        <input type="password" [(ngModel)]="user.password"
+          class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-500" />
+      </div>
+  
+      <!-- Bouton d'inscription -->
+      <button (click)="register()"
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+        S'inscrire
+      </button>
+  
+      <!-- Lien vers la connexion -->
+      <p class="text-sm text-gray-600 text-center mt-4">
+        Déjà inscrit ? <a routerLink="/login" class="text-blue-500 hover:underline">Se connecter</a>
+      </p>
+    </div>
+  </div>
+  
