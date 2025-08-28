@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { RegisterComponent } from './register/register.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
  { path: 'register', component: RegisterComponent },
  { path: 'shop', component: BoutiqueComponent,/** canActivate: [AuthGuard]*/  },
   { path: 'cart', component: CartComponent, /*canActivate: [AuthGuard]*/ },
- // { path: 'admin', component: AdminDashboardComponent, canActivate: [AdminGuard] },
+ { path: 'admin', component: AdminDashboardComponent,  },
   { path: '', redirectTo: 'shop', pathMatch: 'full' }, // Redirection par défaut
   { path: '**', redirectTo: 'shop' } // Gestion des routes inexistantes
 ];

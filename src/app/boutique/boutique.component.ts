@@ -19,45 +19,45 @@ export class BoutiqueComponent {
   products = [
     {
       id: 1,
-      name: 'iPhone 15 Pro',
-      description: 'Écran Super Retina XDR, puce A17 Bionic, triple caméra.',
+      name: 'air pods',
+      description: 'air pods qualité superieure',
       price: 1299,
-      imageUrl: 'https://i.pinimg.com/736x/7e/37/85/7e3785b9edabb86e7d7af4518db66403.jpg'
+      imageUrl: 'assets/airpod.jpeg'
     },
     {
       id: 2,
-      name: 'Samsung Galaxy S24 Ultra',
-      description: 'Écran AMOLED 120Hz, Snapdragon 8 Gen 3, S-Pen.',
+      name: 'casque  ',
+      description: 'casque bluetooth',
       price: 1199,
-      imageUrl: 'https://i.pinimg.com/236x/0f/57/98/0f57981d169adc45c5455ebd7a949c7b.jpg'
+      imageUrl: 'assets/casque.jpeg'
     },
     {
       id: 3,
-      name: 'Google Pixel 8 Pro',
-      description: 'Android 14, caméra IA, écran LTPO 120Hz.',
+      name: 'cle usb',
+      description: 'cle usb 64gb',
       price: 1099,
-      imageUrl: 'https://i.pinimg.com/236x/ed/93/e5/ed93e514854b5aac82409189a813db4e.jpg'
+      imageUrl: 'assets/cle.jpeg'
     },
     {
       id: 4,
-      name: 'Xiaomi 13 Pro',
-      description: 'Snapdragon 8 Gen 2, écran 144Hz, caméra Leica.',
+      name: 'desktop',
+      description: 'ordinateur de bureau 64gb ram 1tb ssd 8core',
       price: 999,
-      imageUrl: 'https://i.pinimg.com/236x/4f/c1/07/4fc107fca68e7dbdd23a500b51021552.jpg'
+      imageUrl: 'assets/desktop.jpeg'
     },
     {
       id: 5,
-      name: 'OnePlus 12',
-      description: 'Écran 2K AMOLED, charge rapide 100W.',
+      name: 'laptop',
+      description: 'laptop 16gb ram 512gb ssd 4core',
       price: 899,
-      imageUrl: 'https://i.pinimg.com/236x/df/3d/c1/df3dc1fcf44c6685cd0fcd6282caef16.jpg'
+      imageUrl: 'assets/laptop.jpeg'
     },
     {
       id: 6,
-      name: 'Sony Xperia 1 V',
-      description: 'Écran OLED 4K HDR, audio Hi-Res, caméra pro.',
+      name: 'Scanner',
+      description: 'scanner haute résolution',
       price: 1099,
-      imageUrl: 'https://i.pinimg.com/236x/7b/9e/b2/7b9eb225c64e97a89fa25b14b8d95c61.jpg'
+      imageUrl: 'assets/scanner.jpeg'
     }
   ];
   // Ajouter un produit au panier
